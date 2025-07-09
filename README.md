@@ -53,3 +53,5 @@ export default tseslint.config({
 })
 ```
 # starter-project
+
+magic-insights

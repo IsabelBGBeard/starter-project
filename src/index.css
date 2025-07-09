@@ -31,6 +31,9 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -61,11 +64,14 @@
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.705 0.015 286.067);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --color-chart-1: #5C7CFA;
+  --color-chart-2: #FDA7DF;
+  --color-chart-3: #72026C;
+  --color-chart-4: #FF5E5B;
+  --color-chart-5: #2ECC71;
+  --color-chart-6: #FFD600;
+  --color-chart-7: #003049;
+  --color-chart-8: #00CFEA;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.141 0.005 285.823);
   --sidebar-primary: oklch(0.21 0.006 285.885);
@@ -74,6 +80,20 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --space-000: 0px;
+  --space-025: 2px;
+  --space-050: 4px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-600: 48px;
+  --space-800: 64px;
+  --space-1200: 96px;
+  --radius-container-standard: 12px;
+  --radius-container-soft: 16px;
+  --radius-container-softest: 24px;
 }
 
 .dark {
@@ -100,6 +120,9 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
+  --chart-6: oklch(0.488 0.243 264.376);
+  --chart-7: oklch(0.627 0.265 303.9);
+  --chart-8: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -118,3 +141,157 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* === Canva Sans & Canva Sans Display Font Faces === */
+@font-face {
+  font-family: 'Canva Sans';
+  src: url('./assets/fonts/CanvaSans-Regular.woff2') format('woff2'),
+       url('./assets/fonts/CanvaSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canva Sans';
+  src: url('./assets/fonts/CanvaSans-Medium.woff2') format('woff2'),
+       url('./assets/fonts/CanvaSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canva Sans';
+  src: url('./assets/fonts/CanvaSans-Bold.woff2') format('woff2'),
+       url('./assets/fonts/CanvaSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canva Sans Display';
+  src: url('./assets/fonts/CanvaSansDisplay-Regular.woff2') format('woff2'),
+       url('./assets/fonts/CanvaSansDisplay-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canva Sans Display';
+  src: url('./assets/fonts/CanvaSansDisplay-Medium.woff2') format('woff2'),
+       url('./assets/fonts/CanvaSansDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Canva Sans Display';
+  src: url('./assets/fonts/CanvaSansDisplay-Bold.woff2') format('woff2'),
+       url('./assets/fonts/CanvaSansDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Typography Utility Classes (Figma Tokens) === */
+.typography-title-xlarge {
+  font-family: 'Canva Sans Display', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .typography-title-xlarge { font-size: 48px; }
+}
+
+.typography-title-large {
+  font-family: 'Canva Sans Display', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .typography-title-large { font-size: 36px; }
+}
+
+.typography-title-medium {
+  font-family: 'Canva Sans Display', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .typography-title-medium { font-size: 24px; }
+}
+
+.typography-title-small {
+  font-family: 'Canva Sans Display', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .typography-title-small { font-size: 21px; }
+}
+
+.typography-title-xsmall {
+  font-family: 'Canva Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .typography-title-xsmall { font-size: 16px; }
+}
+
+.typography-title-xxsmall {
+  font-family: 'Canva Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.typography-title-xxxsmall {
+  font-family: 'Canva Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1%;
+}
+
+/* === Custom Shadow Utilities (from Figma tokens) === */
+.shadow-3layer {
+  box-shadow:
+    0px 24px 24px 0px rgba(24, 44, 89, 0.07),
+    0px 8px 16px 0px rgba(24, 44, 89, 0.14),
+    0px 0px 0px 0px rgba(64, 87, 109, 0.07);
+}
+
+.shadow-3layer-sm {
+  box-shadow:
+    0px 6px 12px 0px rgba(24, 44, 89, 0.07),
+    0px 2px 4px 0px rgba(24, 44, 89, 0.14),
+    0px 0px 0px 0px rgba(64, 87, 109, 0.07);
+}
+
+/* Optional: Utility classes for gap, margin, padding */
+.space-000 { gap: var(--space-000); }
+.space-025 { gap: var(--space-025); }
+.space-050 { gap: var(--space-050); }
+.space-100 { gap: var(--space-100); }
+.space-150 { gap: var(--space-150); }
+.space-200 { gap: var(--space-200); }
+.space-300 { gap: var(--space-300); }
+.space-400 { gap: var(--space-400); }
+.space-600 { gap: var(--space-600); }
+.space-800 { gap: var(--space-800); }
+.space-1200 { gap: var(--space-1200); }
+
+.radius-container-standard { border-radius: var(--radius-container-standard); }
+.radius-container-soft { border-radius: var(--radius-container-soft); }
+.radius-container-softest { border-radius: var(--radius-container-softest); }
